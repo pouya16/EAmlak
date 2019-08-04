@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pouya.eamlak.Actitvities.BuyerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layoutDirection="rtl"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/editTextBuyerName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:paddingRight="10dp"
+                            android:focusedByDefault="true"
+                            android:nextFocusRight="@id/editTextBuyerFamily"
+                            android:hint="نام" />
+
+                        <EditText
+                            android:id="@+id/editTextBuyerFamily"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:paddingRight="10dp"
+                            android:nextFocusForward="@id/editTextBuyerMobile"
+                            android:hint="نام خانوادگی"/>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layoutDirection="rtl"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/editTextBuyerMobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="phone"
+                            android:paddingRight="10dp"
+                            android:nextFocusForward="@id/editTextBuyerID"
+                            android:hint="شماره موبایل" />
+
+                        <EditText
+                            android:id="@+id/editTextBuyerID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:paddingRight="10dp"
+                            android:nextFocusForward="@id/editTextBuyerTelegram"
+                            android:hint="شماره مشتری"/>
+
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/editTextBuyerTelegram"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:paddingRight="10dp"
+                        android:focusedByDefault="false"
+                        android:nextFocusForward="@id/editTextBuyerEmail"
+                        android:hint="آیدی تلگرام"/>
+
+                    <EditText
+                        android:id="@+id/editTextBuyerEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:ems="10"
+                        android:inputType="textWebEmailAddress"
+                        android:paddingRight="10dp"
+                        android:nextFocusForward="@id/editTextBuyerChild"
+                        android:hint="آدرس ایمیل"/>
+
+                    <EditText
+                        android:id="@+id/editTextBuyerChild"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:paddingRight="10dp"
+                        android:hint="تعداد کودک"/>
+
+                    <LinearLayout
+                        android:id="@+id/marriageLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layoutDirection="rtl"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/textView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="وضعیت تاهل:" />
+
+                        <RadioGroup
+                            android:id="@+id/marriageRadioGroup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layoutDirection="rtl"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioBtnBuyerMarriageSingle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="مجرد" />
+
+                            <RadioButton
+                                android:id="@+id/radioBtnMarriageMarried"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="متاهل" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/conditionLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layoutDirection="rtl"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="نوع درخواست:" />
+
+                        <RadioGroup
+                            android:id="@+id/conditionRadioGroup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layoutDirection="rtl"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/loanRadioBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="رهن" />
+
+                            <RadioButton
+                                android:id="@+id/rentRadioBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="اجاره" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <Button
+                    android:id="@+id/btnBuyer1Back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorAccent"
+                    android:paddingRight="10dp"
+                    android:text="بازگشت" />
+
+                <Button
+                    android:id="@+id/btnBuyer1Next"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@android:color/holo_green_dark"
+                    android:paddingLeft="10dp"
+                    android:text="ثبت" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

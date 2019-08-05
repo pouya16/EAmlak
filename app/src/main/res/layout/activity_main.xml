@@ -21,7 +21,9 @@
                 android:id="@+id/topbannerLayout"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:layout_alignParentTop="true">
+                android:layout_alignParentTop="true"
+                android:background="@color/colorAccent"
+                android:backgroundTint="@color/colorAccent">
 
             </FrameLayout>
 
@@ -51,11 +53,12 @@
         </LinearLayout>
 
         <FrameLayout
+            android:id="@+id/bottomBanner"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_alignParentBottom="true"
-            android:id="@+id/bottomBanner"
-            android:layout_gravity="bottom|end">
+            android:layout_gravity="bottom|end"
+            android:background="@color/colorAccent">
 
         </FrameLayout>
 

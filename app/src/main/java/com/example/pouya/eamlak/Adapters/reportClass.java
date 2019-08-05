@@ -9,13 +9,16 @@ import android.graphics.drawable.Drawable;
 public class reportClass {
     private Drawable iconPhoto;
     private String iconText;
+    private Class intentName;
 
-    public reportClass(Drawable readPhoto, String readText) {
+    public reportClass(Drawable readPhoto, String readText,Class startIntent) {
         iconPhoto = readPhoto;
         iconText = readText;
+        intentName = startIntent;
     }
 
 
     public Drawable getIconPhoto(){return iconPhoto;}
     public String getIconText(){return iconText;}
+    public Class getStartIntent(){return intentName;}
 }

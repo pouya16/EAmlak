@@ -2,11 +2,14 @@ package com.example.pouya.eamlak.Actitvities;
 
 import android.Manifest;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatDelegate;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -28,9 +31,20 @@ public class MainActivity extends UAppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        reportClass addIcon = new reportClass(getDrawable(R.drawable.buy),"خرید");
+        reportClass addIcon = new reportClass(getDrawable(R.drawable.buy),"خرید",BuyerActivity.class);
         iconArray.add(addIcon);
-        mainIconAdaptor adaptor = new mainIconAdaptor(this,iconArray);
+        addIcon = new reportClass(getDrawable(R.drawable.buyers),"قروش",Owner2Activity.class);
+        iconArray.add(addIcon);
+        addIcon = new reportClass(getDrawable(R.drawable.sell),"خریداران",SearchBuyerActivity.class);
+        iconArray.add(addIcon);
+        addIcon = new reportClass(getDrawable(R.drawable.house),"خانه",owner_activity.class);
+        iconArray.add(addIcon);
+        addIcon = new reportClass(getDrawable(R.drawable.search),"جستجو",SearchHomeActivity.class);
+        iconArray.add(addIcon);
+        addIcon = new reportClass(getDrawable(R.drawable.setting),"تنظیات",SettingsActivity.class);
+        iconArray.add(addIcon);
+
+        final mainIconAdaptor adaptor = new mainIconAdaptor(this,iconArray);
 
 
 
@@ -40,6 +54,16 @@ public class MainActivity extends UAppCompatActivity {
         setContentView(R.layout.activity_main);
         GridView mainGrid = (GridView) findViewById(R.id.mainGridView);
         mainGrid.setAdapter(adaptor);
+
+        mainGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                reportClass clickedReport = adaptor.getItem(position);
+                Intent intent = new Intent(MainActivity.this,clickedReport.getStartIntent());
+                MainActivity.this.startActivity(intent);
+
+            }
+        });
 
 
 
